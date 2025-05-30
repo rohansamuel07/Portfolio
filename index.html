@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohan Samuel | Full-Stack Developer</title>
+    <meta name="description" content="Rohan Samuel - Full-stack web developer specializing in MERN stack and modern web technologies.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Rohan Samuel | Full-Stack Developer">
+    <meta property="og:description" content="Full-stack web developer specializing in MERN stack and modern web technologies.">
+    <meta property="og:type" content="website">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Script for scroll animations -->
+    <script type="module">
+      // This will be executed after the page loads
+      window.addEventListener('DOMContentLoaded', () => {
+        const scrollReveal = () => {
+          const reveals = document.querySelectorAll('.reveal');
+          
+          reveals.forEach(element => {
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < windowHeight - elementVisible) {
+              element.classList.add('active');
+            }
+          });
+        };
+        
+        // Add reveal class to elements that should animate on scroll
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+          if (!section.classList.contains('reveal')) {
+            section.classList.add('reveal');
+          }
+        });
+        
+        // Check scroll position on page load
+        scrollReveal();
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', scrollReveal);
+      });
+    </script>
+  </body>
+</html>
