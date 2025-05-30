@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="text-lg font-medium text-gray-800 dark:text-white">LinkedIn</h4>
                   <a
-                    href="www.linkedin.com/in/rohan962004"
+                    href="https://www.linkedin.com/in/rohan962004"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
