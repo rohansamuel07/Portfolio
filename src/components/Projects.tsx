@@ -11,6 +11,10 @@ interface Project {
   tags: string[];
   liveLink: string;
   repoLink?: string;
+  demoAdmin?: {
+    email: string;
+    password: string;
+  };
   features: string[];
 }
 
@@ -46,6 +50,10 @@ const Projects: React.FC = () => {
       tags: ['React', 'MongoDB', 'Express', 'Firebase', 'Tailwind CSS'],
       liveLink: 'https://personalblog-8gel.onrender.com',
       repoLink: 'https://github.com/rohansamuel07/personalblog',
+      demoAdmin: {
+        email: 'sampleuser@gmail.com',
+        password: 'sampleuser123',
+      },
       features: [
         'User auth with Firebase',
         'CRUD for blogs & comments',
@@ -91,8 +99,8 @@ const Projects: React.FC = () => {
               key={project.id}
               className={`bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 ${
                 activeProject === project.id
-                  ? "shadow-xl -translate-y-1"
-                  : "hover:shadow-xl hover:-translate-y-1"
+                  ? 'shadow-xl -translate-y-1'
+                  : 'hover:shadow-xl hover:-translate-y-1'
               }`}
             >
               <div className="relative">
@@ -178,6 +186,18 @@ const Projects: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {project.demoAdmin && (
+                      <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-md">
+                        <h4 className="font-medium mb-2 text-gray-800 dark:text-white">🔐 Demo Admin Login:</h4>
+                        <p className="text-gray-700 dark:text-gray-300">
+                          <strong>Email:</strong> {project.demoAdmin.email}
+                        </p>
+                        <p className="text-gray-700 dark:text-gray-300">
+                          <strong>Password:</strong> {project.demoAdmin.password}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
