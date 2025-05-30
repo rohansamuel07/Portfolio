@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, Linkedin, Send } from 'lucide-react';
 import emailjs from 'emailjs-com';
+import Resume from '../assets/Resume.pdf';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -116,7 +117,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="text-lg font-medium text-gray-800 dark:text-white">LinkedIn</h4>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/rohan-samuel"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
@@ -130,12 +131,9 @@ const Contact: React.FC = () => {
             <div className="mt-10">
               <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">Resume</h3>
               <a
-                href="#"
-                className="btn-primary inline-flex items-center"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('Resume download would be implemented here with a real PDF link');
-                }}
+                href={Resume}
+                download="Rohan_Samuel_Resume.pdf"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-300"
               >
                 Download Resume
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
