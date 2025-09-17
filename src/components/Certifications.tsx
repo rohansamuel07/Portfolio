@@ -16,11 +16,32 @@ interface Certification {
 const Certifications: React.FC = () => {
   const certifications: Certification[] = [
     {
+      id: 'nptel-dbms',
+      title: 'Database Management Systems',
+      issuer: 'NPTEL',
+      date: 'April 2023',
+      credential: 'https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs18/Course/NPTEL25CS18S24330301501358400.pdf',
+    },
+    {
+      id: 'codechef-500',
+      title: 'Certificate of Completion – 500 Difficulty Level Practice Problems',
+      issuer: 'CodeChef',
+      date: 'September 2025',
+      credential: 'https://www.codechef.com/certificates/public/7b9162d',
+    },
+    {
+      id: 'ibm-ml',
+      title: 'Machine Learning',
+      issuer: 'IBM',
+      date: 'July 2023',
+      credential: 'https://courses.cognitiveclass.ai/certificates/861c378e11a24f4d982777ce69d975c2',
+    },
+    {
       id: 'oracle',
       title: 'Oracle Cloud Infrastructure Foundations',
       issuer: 'Oracle',
       date: 'February 2024',
-      credential: '#',
+      credential: 'https://drive.google.com/file/d/1ot0GWIM-Gn-6VJBmxeECrXiCQXufb_53/view?usp=sharing',
     },
     {
       id: 'matlab-dl',
@@ -36,22 +57,6 @@ const Certifications: React.FC = () => {
       date: 'September 2023',
       credential: '#',
     },
-    {
-      id: 'ibm-ml',
-      title: 'Machine Learning',
-      issuer: 'IBM',
-      date: 'July 2023',
-      credential:
-        'https://courses.cognitiveclass.ai/certificates/861c378e11a24f4d982777ce69d975c2',
-    },
-    {
-      id: 'nptel-dbms',
-      title: 'Database Management Systems',
-      issuer: 'NPTEL',
-      date: 'April 2023',
-      credential:
-        'https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs18/Course/NPTEL25CS18S24330301501358400.pdf',
-    },
   ];
 
   const handleCredentialClick = (credential?: string) => {
@@ -61,7 +66,7 @@ const Certifications: React.FC = () => {
         autoClose: 3000,
         pauseOnHover: true,
       });
-      return; // Prevents opening a blank page or navigation
+      return;
     }
     window.open(credential, '_blank', 'noopener,noreferrer');
   };
@@ -111,7 +116,6 @@ const Certifications: React.FC = () => {
                     <span>{cert.date}</span>
                   </div>
 
-                  {/* View Credential or Info Icon with tooltip */}
                   {cert.credential && cert.credential !== '#' && cert.credential.trim() !== '' ? (
                     <button
                       type="button"

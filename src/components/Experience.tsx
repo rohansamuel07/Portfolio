@@ -13,11 +13,25 @@ interface ExperienceItem {
 const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
+      id: 'matchkin',
+      company: 'Matchkin (Remote)',
+      role: 'SDE Frontend Intern',
+      period: 'Jun 2025 (2 weeks)',
+      description:
+        'Built frontend components and dashboards during a short, fast-paced internship.',
+      achievements: [
+        'Built a responsive admin dashboard displaying user metrics with interactive charts and visualizations',
+        'Designed and developed a chat interface with focus on usability and clean UI',
+        'Completed all tasks independently within a two-week sprint, meeting design and performance expectations',
+      ],
+    },
+    {
       id: 'hcl',
       company: 'HCL Technologies',
       role: 'Project Intern',
       period: 'Jul 2024 - Oct 2024',
-      description: 'Developed and deployed a full-stack personal blog web application using React, Firebase, and Tailwind CSS.',
+      description:
+        'Developed and deployed a full-stack personal blog web application using React, Firebase, and Tailwind CSS.',
       achievements: [
         'Implemented features including post creation, editing, commenting, and dark/light theme toggle',
         'Created a secure admin dashboard for managing users and content',
@@ -31,7 +45,8 @@ const Experience: React.FC = () => {
       company: 'Eduversity',
       role: 'Web Development Intern',
       period: 'Jun 2024 - Jul 2024',
-      description: 'Developed a solid foundation in the MERN stack (MongoDB, Express.js, React, Node.js).',
+      description:
+        'Developed a solid foundation in the MERN stack (MongoDB, Express.js, React, Node.js).',
       achievements: [
         'Gained hands-on experience in building basic web applications with React and Node.js',
         'Strengthened front-end skills in HTML, CSS, and JavaScript',
@@ -65,8 +80,8 @@ const Experience: React.FC = () => {
 
         <div className="max-w-3xl mx-auto">
           <div className="relative border-l-2 border-blue-500 dark:border-blue-400 pl-8 ml-4">
-            {experiences.map((exp, index) => (
-              <div key={exp.id} className={`mb-12`}>
+            {experiences.map((exp) => (
+              <div key={exp.id} className="mb-12">
                 <div className="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full -left-[9px] mt-1.5"></div>
 
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -85,10 +100,15 @@ const Experience: React.FC = () => {
 
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{exp.description}</p>
 
-                  <h4 className="font-medium mb-2 text-gray-800 dark:text-white">Key Achievements:</h4>
+                  <h4 className="font-medium mb-2 text-gray-800 dark:text-white">
+                    Key Achievements:
+                  </h4>
                   <ul className="space-y-1">
                     {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="text-gray-600 dark:text-gray-300 text-sm flex items-start gap-2">
+                      <li
+                        key={i}
+                        className="text-gray-600 dark:text-gray-300 text-sm flex items-start gap-2"
+                      >
                         <span className="text-green-500 dark:text-green-400">✓</span> {achievement}
                       </li>
                     ))}
