@@ -6,14 +6,15 @@ const Hero: React.FC = () => {
   
   useEffect(() => {
     const texts = [
-    "Build full-stack apps with React and Firebase.",
-    "Design responsive UIs using Tailwind CSS.",
-    "Implement secure authentication systems.",
-    "Create admin dashboards for easy management.",
-    "Work with the MERN stack and REST APIs.",
-    "Write clean, optimized code.",
-    "Collaborate well in agile teams."
-    ];
+  "Build full-stack apps with MERN.",
+  "Design scalable, reliable systems.",
+  "Create responsive UIs with modern tools.",
+  "Implement secure auth systems.",
+  "Work with REST APIs and data flows.",
+  "Write clean, optimized code.",
+  "Collaborate in agile teams."
+];
+
     
     let textIndex = 0;
     let charIndex = 0;
@@ -85,8 +86,8 @@ const Hero: React.FC = () => {
         </h2>
         
         <p className="text-lg md:text-xl max-w-2xl mb-8 text-gray-600 dark:text-gray-400">
-          Full-stack web developer specializing in MERN stack and modern web technologies.
-          Creating responsive, user-friendly applications with clean code and scalable architecture.
+          Software engineer with experience in the MERN stack and modern web technologies.
+          I enjoy building reliable, scalable systems and writing clean, maintainable code.
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-12">

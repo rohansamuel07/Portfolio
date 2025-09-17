@@ -99,7 +99,7 @@ const Skills: React.FC = () => {
           </h3>
 
           <div className="flex flex-wrap justify-center gap-3">
-            {['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Tailwind CSS', 'HTML', 'CSS', 'MySQL', 'Git', 'REST APIs', 'c'].map((tech, index) => (
+            {['JavaScript', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Tailwind CSS', 'HTML', 'CSS', 'MySQL', 'Git', 'Java', 'c'].map((tech, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full shadow-sm border border-gray-200 dark:border-gray-700 text-sm hover:border-blue-500 dark:hover:border-blue-400 transition-colors duration-300"
